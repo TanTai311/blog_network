@@ -1,0 +1,51 @@
+baseURL = 'https://example.org/'
+languageCode = 'vi-vn'
+title = 'Blog Lập Trình Mạng'
+theme = 'pehtheme-hugo'
+themesDir = '../..'
+disableKinds = ['taxonomy', 'term']
+
+summaryLength = '20' # <- 20 words are approximately 160 characters
+googleAnalytics = 'G-MEASUREMENT_ID' # <- Your GA-4
+disqusShortname = 'your-disqus-shortname' # <- Get form here : https://disqus.com
+
+[params]
+	# Meta description, not exceeding 160 characters, used for the meta description within the HTML head
+	description = 'Blog cá nhân về lập trình mạng, ghi chép kiến thức Java và JavaScript.'
+	mainSections = ['posts']
+
+  [params.Author]
+	name = 'NGUYỄN TẤN TÀI'
+	bio = 'Sinh viên CNTT, định hướng backend và lập trình mạng. Ưu tiên API ổn định, log rõ ràng, tối ưu timeout/retry và bảo mật kết nối.'
+	avatar = 'images/ảnh biển2.png'
+	github = 'https://github.com/TanTai311'
+
+[pagination]
+	pagerSize = 6 # <- Set the desired number of posts per page 
+
+[menu] # Menu management
+	[[menu.main]]
+		name = 'Home'
+		pageRef = '/'
+		weight = 10
+	[[menu.main]]
+		name = 'Blog'
+		pageRef = '/posts'
+		weight = 20
+	[[menu.main]]
+		name = 'Hồ sơ'
+		pageRef = '/about'
+		weight = 30
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.116.0"
+  [module.mounts] # Directing the static folder to assets.
+  	source = 'assets'
+  	target = 'static'

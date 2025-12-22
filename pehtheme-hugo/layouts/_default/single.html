@@ -1,0 +1,228 @@
+﻿{{ define "main" }}
+{{- $isPost := eq .Section "posts" -}}
+{{- partial "content/breadcrumb.html" . -}}
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
+
+  <article class="md:col-span-2 prose lg:prose-lg">
+
+    <header class="not-prose">
+      
+      <h1 id="title" class="text-4xl font-bold leading-normal">{{ .Title }}</h1>
+
+      {{- with .Params.description }}
+      <div id="lead" class="my-6">
+        <p class="font-bold">{{ . }} </p>
+      </div>
+      {{- end }}
+
+      {{- if $isPost }}
+      {{/* Badge tag/category */}}
+      <div class="flex flex-wrap gap-6 mb-4 not-prose">
+        {{- range .Params.categories }}
+          <span class="text-xs font-semibold px-3 py-1 rounded-full bg-indigo-100 text-indigo-800">{{ . | humanize }}</span>
+        {{- end }}
+        {{- range .Params.tags }}
+          {{- $color := "bg-blue-100 text-blue-800" -}}
+          {{- if in (lower .) "java" }}{{ $color = "bg-orange-100 text-orange-800" }}{{ end -}}
+          {{- if in (lower .) "javascript" }}{{ $color = "bg-amber-100 text-amber-800" }}{{ end -}}
+          {{- if in (lower .) "network" }}{{ $color = "bg-indigo-100 text-indigo-800" }}{{ end -}}
+          <span class="text-xs font-semibold px-3 py-1 rounded-full {{ $color }}">{{ . | humanize }}</span>
+        {{- end }}
+      </div>
+      
+      <div id="writer" class="flex items-center space-x-4">
+
+        {{- $name := .Site.Params.Author.name -}}
+
+        {{- with $avatar := resources.Get .Site.Params.Author.avatar }}
+
+        <img class="w-12 h-12 bg-black rounded-full" style="object-fit: cover; object-position: 30% 30%;" src="{{ $avatar.Permalink }}" alt="{{ $name }} avatar" width="{{ $avatar.Width }}" height="{{ $avatar.Height }}">
+
+        {{ end -}}
+        
+        <ul class="flex items-center space-x-4 flex-nowrap whitespace-nowrap overflow-x-auto">
+          
+          <li class="font-semibold my-2">{{ .Site.Params.Author.name }}</li>
+          
+          <li class="before:content-['/'] before:mr-2 before:opacity-50 my-2">
+            {{- $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" -}}
+            {{- $dateHuman := .Date | time.Format ":date_long" -}}
+            <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+          </li>
+
+          <li class="before:content-['/'] before:mr-2 before:opacity-50 my-2">
+            {{ .ReadingTime }} phút đọc
+          </li>
+
+        </ul>
+
+      </div>
+      {{- end }}
+      
+    </header>
+
+    {{- if and $isPost .Params.image }}
+    <figure id="featureimage" class="rounded-xl aspect-video">
+
+      {{- if .Params.image }}
+
+        {{- if ( strings.HasPrefix .Params.image "http" ) }}
+
+          <img class="rounded-lg" src="{{ .Params.image }}" alt="{{ .Params.title }}">
+
+        {{- else }}
+
+          {{- with $image := resources.Get .Params.image }}
+            {{- $image := $image.Resize "750x" }}
+            <img class="rounded-lg" src="{{ $image.Permalink }}" alt="{{ .Params.title }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
+          {{- end }}
+
+        {{- end }}
+
+      {{- end }}
+
+      {{- if ( isset .Params "caption" ) }}
+        <figcaption class="text-center italic text-xs">{{ .Params.caption }}</figcaption>
+      {{- end }}
+
+    </figure>
+    {{- end }}
+
+    {{- if $isPost }}
+    <div id="post-detail" class="not-prose my-8 grid gap-6 md:grid-cols-2">
+      <div class="rounded-2xl border bg-zinc-100 p-6">
+        <h2 class="text-xl font-semibold mb-4">Thông tin bài viết</h2>
+        <ul class="text-sm space-y-4">
+          <li><span class="font-semibold">Tác giả:</span> {{ .Site.Params.Author.name }}</li>
+          <li>
+            <span class="font-semibold">Ngày đăng:</span>
+            {{- $dateHuman := .Date | time.Format ":date_long" -}}
+            {{ $dateHuman }}
+          </li>
+          {{- if ne .Lastmod .Date }}
+          <li>
+            <span class="font-semibold">Cập nhật:</span>
+            {{- $lastHuman := .Lastmod | time.Format ":date_long" -}}
+            {{ $lastHuman }}
+          </li>
+          {{- end }}
+          <li><span class="font-semibold">Thời gian đọc:</span> {{ .ReadingTime }} phút</li>
+          <li><span class="font-semibold">Số từ:</span> {{ .WordCount }}</li>
+          {{- with .Params.categories }}
+          <li>
+            <span class="font-semibold">Chủ đề:</span>
+            <span class="ml-2 inline-flex flex-wrap gap-2 align-middle">
+              {{- range . -}}
+                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-indigo-100 text-indigo-800">{{ . | humanize }}</span>
+              {{- end -}}
+            </span>
+          </li>
+          {{- end }}
+          {{- with .Params.tags }}
+          <li>
+            <span class="font-semibold">Từ khóa:</span>
+            <span class="ml-2 inline-flex flex-wrap gap-2 align-middle">
+              {{- range . -}}
+                {{- $color := "bg-blue-100 text-blue-800" -}}
+                {{- if in (lower .) "java" }}{{ $color = "bg-orange-100 text-orange-800" }}{{ end -}}
+                {{- if in (lower .) "javascript" }}{{ $color = "bg-amber-100 text-amber-800" }}{{ end -}}
+                {{- if in (lower .) "network" }}{{ $color = "bg-indigo-100 text-indigo-800" }}{{ end -}}
+                <span class="text-xs font-semibold px-3 py-1 rounded-full {{ $color }}">{{ . | humanize }}</span>
+              {{- end -}}
+            </span>
+          </li>
+          {{- end }}
+        </ul>
+        {{- with .Params.description }}
+        <p class="text-sm text-zinc-500 mt-3"><span class="font-semibold">Tóm tắt:</span> {{ . }}</p>
+        {{- end }}
+      </div>
+      {{- if .TableOfContents }}
+      <div class="rounded-2xl border bg-zinc-100 p-6">
+        <h2 class="text-xl font-semibold mb-4">Mục lục</h2>
+        <div class="text-sm">{{ .TableOfContents }}</div>
+      </div>
+      {{- end }}
+    </div>
+    {{- end }}
+
+    <div id="content" class="mb-14">
+      <!-- Content -->
+
+      {{- .Content -}}
+
+    </div>
+
+    <footer id="content-footer" class="not-prose">
+
+      {{- if $isPost }}
+      <div id="comment" class="border p-8 bg-zinc-100 rounded-2xl">
+
+        <h2 class="text-xl font-semibold">Bình luận</h2>
+
+        <p>Chức năng bình luận đang cập nhật.</p>
+
+        {{- /* template "_internal/disqus.html" . */ -}}
+
+      </div>
+
+      <div id="author-box" class="my-8 md:my-14 border p-8 bg-zinc-100 rounded-2xl">
+
+        <img class="w-20 h-20 rounded-full" style="object-fit: cover; object-position: 30% 30%;" src="{{ .Site.Params.Author.avatar | relURL }}" alt="{{ .Site.Params.Author.name }}">
+
+        <h2 class="text-xl font-bold my-4">Tác giả: {{ .Site.Params.Author.name }}</h2>
+
+        <p class="mb-4">{{ .Site.Params.Author.bio }}</p>
+
+        {{- with .Site.Params.Author.github }}
+        <ul class="flex flex-wrap space-x-4">
+          <li>
+            <a class="flex items-center decoration-auto hover:underline" href="{{ . }}" target="_blank" rel="noopener">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+              </svg>
+              <span class="ml-2">GitHub</span>
+            </a>
+          </li>
+        </ul>
+        {{- end }}
+        
+      </div>
+
+      <div id="related-post" class="">
+
+        <h2 class="text-xl md:text-2xl font-bold mb-6 md:mb-8">Gợi ý thêm</h2>
+
+        {{- $related := .Site.RegularPages.Related . | first 2 -}}
+
+        {{- with $related -}}
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          {{- range . }}
+
+          {{- partial "content/card.html" . -}}
+
+          {{- end }}
+          
+        </div>
+
+        {{- end }}
+      </div>
+      {{- end }}
+
+    </footer>
+
+  </article>
+
+  <!-- Aside -->
+  <aside class="md:col-span-1">
+
+    {{- partial "content/aside.html" . -}}
+    
+  </aside>
+
+</div>
+  
+{{ end }}

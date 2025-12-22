@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <rect width="1200" height="800" fill="#f1f5f9"/>
+  <rect x="40" y="40" width="1120" height="720" rx="24" fill="#ffffff" stroke="#94a3b8" stroke-width="4"/>
+  <text x="600" y="200" text-anchor="middle" font-size="34" font-family="Arial, sans-serif" fill="#0f172a">SECURITY & API</text>
+  <text x="600" y="260" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" fill="#475569">Certificate of Excellence</text>
+  <text x="600" y="360" text-anchor="middle" font-size="24" font-family="Arial, sans-serif" fill="#0f172a">NGUYEN TAN TAI</text>
+  <text x="600" y="430" text-anchor="middle" font-size="16" font-family="Arial, sans-serif" fill="#64748b">JWT, CORS, HTTPS Best Practices</text>
+  <rect x="120" y="520" width="960" height="6" fill="#cbd5f5"/>
+</svg>
