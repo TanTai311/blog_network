@@ -26,8 +26,8 @@ jobs:
       - name: Setup Hugo
         uses: actions/setup-hugo@v2
         with:
-          hugo-version: "0.124.1"
-          extended: false
+          hugo-version: "0.153.1"
+          extended: true
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
