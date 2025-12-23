@@ -11,8 +11,8 @@
       <h1 class="home-hero__title">{{ .Site.Params.Author.name }}</h1>
       <p class="home-hero__bio">{{ .Site.Params.Author.bio }}</p>
       <div class="home-hero__actions">
-        <a class="btn-primary" href="{{ "/about" | relURL }}">Xem hồ sơ</a>
-        <a class="btn-ghost" href="{{ "/contact" | relURL }}">Liên hệ</a>
+        <a class="btn-primary" href="{{ "about" | relURL }}">Xem hồ sơ</a>
+        <a class="btn-ghost" href="{{ "contact" | relURL }}">Liên hệ</a>
       </div>
     </div>
   </div>
@@ -52,7 +52,7 @@
       <h2 class="section-title">Bài viết nổi bật</h2>
       <p class="section-subtitle">Các bài viết tiêu biểu và dễ đọc để bắt đầu.</p>
     </div>
-    <a class="section-link" href="{{ "/posts" | relURL }}">Xem tất cả</a>
+    <a class="section-link" href="{{ "posts" | relURL }}">Xem tất cả</a>
   </div>
 
   {{- $featured := where .Site.RegularPages "Params.tags" "intersect" (slice "feature" ) -}}
