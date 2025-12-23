@@ -8,7 +8,7 @@ draft: false
 <div class="not-prose rounded-3xl bg-zinc-100 p-6 lg:p-10">
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6 profile-grid">
     <div class="flex items-center">
-      <img class="w-20 h-20 rounded-full bg-white" style="object-fit: cover; object-position: 30% 30%;" src="/images/ảnh biển2.png" alt="NGUYỄN TẤN TÀI">
+      <img class="w-20 h-20 rounded-full bg-white" style="object-fit: cover; object-position: 30% 30%;" src="/blog_network/images/ảnh biển2.png" alt="NGUYỄN TẤN TÀI">
     </div>
     <div>
       <p class="text-xs uppercase text-zinc-500">Hồ sơ cá nhân</p>
@@ -98,19 +98,19 @@ Các học phần và đồ án mình đã làm tập trung vào:
 
 <div class="not-prose cert-grid">
   <figure class="rounded-2xl border bg-zinc-100 p-4">
-    <img class="rounded-xl w-full bg-white p-2 cert-image" src="/images/Networking Basics.png" alt="Networking Basics">
+    <img class="rounded-xl w-full bg-white p-2 cert-image" src="/blog_network/images/Networking Basics.png" alt="Networking Basics">
     <figcaption class="text-sm text-center mt-3">Networking Basics</figcaption>
   </figure>
   <figure class="rounded-2xl border bg-zinc-100 p-4">
-    <img class="rounded-xl w-full bg-white p-2 cert-image" src="/images/Introduction to Cybersecurity.png" alt="Introduction to Cybersecurity">
+    <img class="rounded-xl w-full bg-white p-2 cert-image" src="/blog_network/images/Introduction to Cybersecurity.png" alt="Introduction to Cybersecurity">
     <figcaption class="text-sm text-center mt-3">Introduction to Cybersecurity</figcaption>
   </figure>
   <figure class="rounded-2xl border bg-zinc-100 p-4">
-    <img class="rounded-xl w-full bg-white p-2 cert-image" src="/images/JavaScript Essentials 1.png" alt="JavaScript Essentials 1">
+    <img class="rounded-xl w-full bg-white p-2 cert-image" src="/blog_network/images/JavaScript Essentials 1.png" alt="JavaScript Essentials 1">
     <figcaption class="text-sm text-center mt-3">JavaScript Essentials 1</figcaption>
   </figure>
   <figure class="rounded-2xl border bg-zinc-100 p-4">
-    <img class="rounded-xl w-full bg-white p-2 cert-image" src="/images/JavaScript Essentials 2.png" alt="JavaScript Essentials 2">
+    <img class="rounded-xl w-full bg-white p-2 cert-image" src="/blog_network/images/JavaScript Essentials 2.png" alt="JavaScript Essentials 2">
     <figcaption class="text-sm text-center mt-3">JavaScript Essentials 2</figcaption>
   </figure>
 </div>
@@ -119,11 +119,11 @@ Các học phần và đồ án mình đã làm tập trung vào:
 
 <div class="not-prose achievement-grid gap-6">
   <figure class="rounded-2xl border bg-zinc-100 p-4">
-    <img class="rounded-xl bg-white p-2 achievement-image" src="/images/2280602804-Nguy%E1%BB%85n%20T%E1%BA%A5n%20T%C3%A0i.png" alt="Nguyễn Tấn Tài">
+    <img class="rounded-xl bg-white p-2 achievement-image" src="/blog_network/images/2280602804-Nguy%E1%BB%85n%20T%E1%BA%A5n%20T%C3%A0i.png" alt="Nguyễn Tấn Tài">
     <figcaption class="text-sm text-center mt-3">Sinh viên tiêu biểu năm học 2024-2025</figcaption>
   </figure>
   <figure class="rounded-2xl border bg-zinc-100 p-4">
-    <img class="rounded-xl bg-white p-2 achievement-image" src="/images/%C4%90%E1%BA%A1t%20d%E1%BB%B1%20%C3%A1n%20xu%E1%BA%A5t%20s%E1%BA%AFc%20t%E1%BA%A1i%20phi%C3%AAn%20c%C3%B4ng%20b%E1%BB%91%20poster.jpg" alt="Đạt dự án xuất sắc tại phiên công bố poster">
+    <img class="rounded-xl bg-white p-2 achievement-image" src="/blog_network/images/%C4%90%E1%BA%A1t%20d%E1%BB%B1%20%C3%A1n%20xu%E1%BA%A5t%20s%E1%BA%AFc%20t%E1%BA%A1i%20phi%C3%AAn%20c%C3%B4ng%20b%E1%BB%91%20poster.jpg" alt="Đạt dự án xuất sắc tại phiên công bố poster">
     <figcaption class="text-sm text-center mt-3">Dự án xuất sắc tại phiên công bố poster</figcaption>
   </figure>
 </div>
