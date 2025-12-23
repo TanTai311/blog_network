@@ -3,7 +3,7 @@ title: "Node.js + Express: API và middleware cơ bản"
 date: 2024-11-30T11:30:00+07:00
 slug: "node-express-api-middleware"
 description: "Tổ chức router, middleware, JWT auth và logging request trong Express."
-image: ''
+image: 'images/Node.js + Express API và middleware cơ bản.png'
 categories:
   - javascript
 tags:
@@ -58,3 +58,4 @@ app.use((err, req, res, _next) => {
 ## 6. Kiểm thử
 - Postman/curl: kiểm tra 200/401/404/500.
 - Viết test nhỏ với supertest để chắc tuyến API chạy đúng.
+

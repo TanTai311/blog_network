@@ -63,19 +63,19 @@
     </header>
 
     {{- if and $isPost .Params.image }}
-    <figure id="featureimage" class="rounded-xl aspect-video">
+    <figure id="featureimage" class="post-hero">
 
       {{- if .Params.image }}
 
         {{- if ( strings.HasPrefix .Params.image "http" ) }}
 
-          <img class="rounded-lg" src="{{ .Params.image }}" alt="{{ .Params.title }}">
+          <img class="post-hero__img" src="{{ .Params.image }}" alt="{{ .Params.title }}">
 
         {{- else }}
 
           {{- with $image := resources.Get .Params.image }}
             {{- $image := $image.Resize "750x" }}
-            <img class="rounded-lg" src="{{ $image.Permalink }}" alt="{{ .Params.title }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
+            <img class="post-hero__img" src="{{ $image.Permalink }}" alt="{{ .Params.title }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
           {{- end }}
 
         {{- end }}

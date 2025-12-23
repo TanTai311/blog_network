@@ -1,94 +1,105 @@
-﻿{{ define "main" }}
+{{ define "main" }}
 
 <!-- Profile intro -->
 <section class="my-8 md:my-14">
-  <div class="rounded-3xl bg-zinc-100 p-6 lg:p-10">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 profile-grid">
-      <div class="flex items-center">
-        <img class="w-20 h-20 rounded-full bg-white" style="object-fit: cover; object-position: 30% 30%;" src="{{ .Site.Params.Author.avatar | relURL }}" alt="{{ .Site.Params.Author.name }}">
-      </div>
-      <div>
-        <p class="text-xs uppercase text-zinc-500">Hồ sơ</p>
-        <h1 class="text-3xl md:text-4xl font-bold mt-2">{{ .Site.Params.Author.name }}</h1>
-        <p class="text-zinc-500 mt-2">{{ .Site.Params.Author.bio }}</p>
+  <div class="home-hero">
+    <div class="home-hero__avatar">
+      <img class="w-20 h-20 rounded-full bg-white" style="object-fit: cover; object-position: 30% 30%;" src="{{ .Site.Params.Author.avatar | relURL }}" alt="{{ .Site.Params.Author.name }}">
+    </div>
+    <div>
+      <p class="section-kicker">Hồ sơ</p>
+      <h1 class="home-hero__title">{{ .Site.Params.Author.name }}</h1>
+      <p class="home-hero__bio">{{ .Site.Params.Author.bio }}</p>
+      <div class="home-hero__actions">
+        <a class="btn-primary" href="{{ "/about" | relURL }}">Xem hồ sơ</a>
+        <a class="btn-ghost" href="{{ "/contact" | relURL }}">Liên hệ</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Feature post by tag = "feature" -->
-
-{{- range where .Site.RegularPages "Params.tags" "intersect" (slice "feature" ) | first 1 -}}
-<section class="block md:flex relative group p-6 lg:p-10 space-y-6 md:space-x-6 my-14 bg-zinc-100 rounded-3xl hover:bg-blue-100">
-  <figure class="basis-1/2 w-full aspect-video overflow-hidden rounded-2xl border">
-
-    {{- if .Params.image }}
-
-      {{- if (strings.HasPrefix .Params.image "http") }}
-
-        <img class="object-cover group-hover:scale-105 transition duration-500 cursor-pointer" src="{{ .Params.image }}" alt="{{ $.Name }}" style="width: 100%; height: 100%; object-fit: cover;">
-
-      {{- else }}
-
-        {{- with $imgfeature := resources.Get .Params.image }}
-          {{ $imgfeature := $imgfeature.Resize "720x Q85" -}}
-          <img class="object-cover group-hover:scale-105 transition duration-500 cursor-pointer" src="{{ $imgfeature.Permalink }}" alt="{{ $.Name }}" width="{{ $imgfeature.Width }}" height="{{ $imgfeature.Height }}">
-        {{- end }}
-
-      {{- end }}
-
-    {{- end }}
-
-  </figure>
-  <div class="basis-1/2 self-center">
-    <h2 class="text-2xl md:text-3xl lg:text-5xl font-bold mb-4"><a class="before:content-[''] before:z-10 before:top-0 before:right-0 before:left-0 before:bottom-0 before:absolute before:pointer-events-auto" href="{{ .Permalink }}">{{ .Title}}</a></h2>
-    <time datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}"><span class="font-bold">{{ .Date.Format "Jan 02, 2006" }}</span></time>
+<section class="home-section">
+  <div class="section-head">
+    <div>
+      <p class="section-kicker">Chủ đề</p>
+      <h2 class="section-title">Chủ đề chính</h2>
+      <p class="section-subtitle">Tập trung vào hệ thống mạng, backend, và ứng dụng AI cho bài toán thực tế.</p>
+    </div>
+  </div>
+  <div class="topic-grid">
+    <div class="topic-card">
+      <p class="topic-card__kicker">Networking</p>
+      <h3 class="topic-card__title">Lập trình mạng</h3>
+      <p class="topic-card__desc">TCP/UDP, HTTP, WebSocket, thiết kế hệ thống ổn định.</p>
+    </div>
+    <div class="topic-card">
+      <p class="topic-card__kicker">Backend</p>
+      <h3 class="topic-card__title">API & dịch vụ</h3>
+      <p class="topic-card__desc">Thiết kế API rõ ràng, logging, retry và bảo mật cơ bản.</p>
+    </div>
+    <div class="topic-card">
+      <p class="topic-card__kicker">AI</p>
+      <h3 class="topic-card__title">Machine Learning</h3>
+      <p class="topic-card__desc">Từ dữ liệu đến mô hình và ứng dụng recommendation.</p>
+    </div>
   </div>
 </section>
 
-{{ end -}}
-
-<!-- / End feature post  -->
-
-<hr class="my-8">
-<!-- Start recent post  -->
-
-  <section class="mb-16">
-
-    <div class="flex items-center mb-6">
-
-      <h2 class="text-3xl md:text-4xl font-bold mr-auto">Bài viết mới</h2>
-
+<section class="home-section">
+  <div class="section-head">
+    <div>
+      <p class="section-kicker">Nổi bật</p>
+      <h2 class="section-title">Bài viết nổi bật</h2>
+      <p class="section-subtitle">Các bài viết tiêu biểu và dễ đọc để bắt đầu.</p>
     </div>
+    <a class="section-link" href="{{ "/posts" | relURL }}">Xem tất cả</a>
+  </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-10">
+  {{- $featured := where .Site.RegularPages "Params.tags" "intersect" (slice "feature" ) -}}
+  {{- if lt (len $featured) 1 -}}
+    {{- $featured = first 3 (where site.RegularPages "Type" "in" site.Params.mainSections) -}}
+  {{- else -}}
+    {{- $featured = first 3 $featured -}}
+  {{- end -}}
 
-    {{ $paginator := .Paginate ( where site.RegularPages "Type" "in" site.Params.mainSections) }}
-
-    {{ range $paginator.Pages }}
-
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    {{ range $featured }}
       {{- partial "content/card" . -}}
-
     {{ end }}
+  </div>
+</section>
 
+<section class="home-section">
+  <div class="section-head">
+    <div>
+      <p class="section-kicker">Cập nhật</p>
+      <h2 class="section-title">Bài viết mới</h2>
     </div>
+  </div>
 
-    <!-- Paginate here -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-    <div class="flex items-center mt-10">
-      {{- if $paginator.HasPrev -}}
-        <a class="border rounded-full px-6 py-2 hover:bg-zinc-200 mr-auto" href="{{ $paginator.Prev.URL }}">&lt; Trước</a>
-      {{- end -}}
+  {{ $paginator := .Paginate ( where site.RegularPages "Type" "in" site.Params.mainSections) }}
 
-      {{- if $paginator.HasNext -}}
-        <a class="border rounded-full px-6 py-2 hover:bg-zinc-200" href="{{ $paginator.Next.URL }}">Sau &gt;</a>
-      {{- end -}}
-    </div>
+  {{ range $paginator.Pages }}
 
-  </section>
+    {{- partial "content/card" . -}}
 
-<!-- / End recent post  -->
+  {{ end }}
 
-  {{- partial "content/newsletter.html" . -}}
+  </div>
+
+  <div class="flex items-center mt-10">
+    {{- if $paginator.HasPrev -}}
+      <a class="border rounded-full px-6 py-2 hover:bg-zinc-200 mr-auto" href="{{ $paginator.Prev.URL }}">&lt; Trước</a>
+    {{- end -}}
+
+    {{- if $paginator.HasNext -}}
+      <a class="border rounded-full px-6 py-2 hover:bg-zinc-200" href="{{ $paginator.Next.URL }}">Sau &gt;</a>
+    {{- end -}}
+  </div>
+</section>
+
+{{- partial "content/newsletter.html" . -}}
 
 {{ end }}

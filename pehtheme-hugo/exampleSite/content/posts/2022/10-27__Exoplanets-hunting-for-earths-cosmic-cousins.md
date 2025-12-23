@@ -3,7 +3,7 @@ title: "Async/Await và xử lý bất đồng bộ trong JavaScript"
 date: 2024-11-15T11:20:00+07:00
 slug: "async-await-pattern-javascript"
 description: "So sánh Callback vs Promise vs Async/Await và cách xử lý lỗi mạng bất đồng bộ."
-image: ''
+image: 'images/AsyncAwait và xử lý bất đồng bộ trong JavaScript.png'
 categories:
   - javascript
 tags:
@@ -58,3 +58,4 @@ try {
 - `await` đúng chỗ, tránh quên `return` Promise.
 - Luôn bắt lỗi: `try/catch` hoặc `.catch` cuối chain.
 - Dùng `Promise.allSettled` khi cần thu kết quả kể cả bị lỗi.
+

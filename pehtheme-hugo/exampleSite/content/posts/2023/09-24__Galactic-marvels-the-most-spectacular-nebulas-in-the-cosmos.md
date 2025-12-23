@@ -3,7 +3,7 @@ title: "REST API nhỏ gọn với Spring Boot"
 date: 2024-11-15T14:10:00+07:00
 slug: "rest-api-spring-boot-co-ban"
 description: "Thiết kế CRUD có phân trang, validation, trả lỗi chuẩn JSON và log request/response."
-image: ''
+image: 'images/REST API nhỏ gọn với Spring Boot.png'
 categories:
   - java
 tags:
@@ -52,3 +52,4 @@ class PostController {
 ## 6. Deploy
 - Profile `dev` bật h2/log SQL; `prod` tắt h2, cấu hình DB thật.
 - Health check tại `/actuator/health` nếu dùng actuator.
+

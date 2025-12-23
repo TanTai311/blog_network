@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
-  <rect width="1200" height="800" fill="#fefce8"/>
-  <rect x="40" y="40" width="1120" height="720" rx="24" fill="#ffffff" stroke="#facc15" stroke-width="4"/>
-  <text x="600" y="200" text-anchor="middle" font-size="34" font-family="Arial, sans-serif" fill="#a16207">JAVASCRIPT BACKEND</text>
-  <text x="600" y="260" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" fill="#b45309">Certificate of Completion</text>
-  <text x="600" y="360" text-anchor="middle" font-size="24" font-family="Arial, sans-serif" fill="#0f172a">NGUYEN TAN TAI</text>
-  <text x="600" y="430" text-anchor="middle" font-size="16" font-family="Arial, sans-serif" fill="#64748b">Node.js, Express, WebSocket</text>
-  <rect x="120" y="520" width="960" height="6" fill="#fde68a"/>
-</svg>

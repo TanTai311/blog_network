@@ -3,7 +3,7 @@ title: "Chat server TCP đa luồng trong Java"
 date: 2024-11-28T09:00:00+07:00
 slug: "chat-server-tcp-da-luong-java"
 description: "Xây server TCP nhận nhiều client, broadcast theo phòng, xử lý ngắt kết nối và log theo phiên."
-image: ''
+image: 'images/Chat server TCP đa luồng trong Java.png'
 categories:
   - java
 tags:
@@ -57,3 +57,4 @@ while (true) {
 - Thêm auth nhẹ (token) trước khi join phòng.
 - Ghi log JSON để dễ phân tích (time, user, room, bytes).
 - Chuyển sang NIO khi cần scale hơn.
+

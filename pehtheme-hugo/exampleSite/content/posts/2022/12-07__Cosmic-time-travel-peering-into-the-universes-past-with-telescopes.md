@@ -3,7 +3,7 @@ title: "Bảo mật cơ bản: CORS, JWT và HTTPS"
 date: 2024-12-07T18:15:00+07:00
 slug: "bao-mat-co-ban-cors-jwt-https"
 description: "Những lưu ý tối thiểu khi làm API: CORS đúng, JWT an toàn hơn, bật HTTPS."
-image: ''
+image: 'images/Bảo mật cơ bản CORS, JWT và HTTPS.png'
 categories:
   - security
 tags:
@@ -38,3 +38,4 @@ draft: false
 - JWT: thời hạn ngắn, refresh, revoke khi lộ token.
 - HTTPS: bắt buộc, redirect HTTP→HTTPS.
 - Log & rate limit: bật từ đầu, giám sát 429/401.
+

@@ -3,7 +3,7 @@ title: "Fetch API trong JavaScript: gọi REST và xử lý lỗi"
 date: 2024-11-15T09:20:00+07:00
 slug: "fetch-api-javascript-rest"
 description: "Cách dùng fetch/async-await, kiểm tra res.ok, retry và timeout bằng AbortController."
-image: ''
+image: 'images/Fetch API trong JavaScript gọi REST và xử lý lỗi.png'
 categories:
   - javascript
 tags:
@@ -52,3 +52,4 @@ const res = await fetch("/api/posts", {
 - Disable nút khi đang gửi để tránh double-submit.
 - Log lỗi cho dev, thông báo gọn cho user.
 - Cân nhắc cache và ETag nếu cần.
+

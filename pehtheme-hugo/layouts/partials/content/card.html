@@ -1,28 +1,34 @@
-<article class="relative group bg-zinc-100 hover:bg-blue-100 rounded-3xl">
-	
-	<a class="insert-link" href="{{ .Permalink }}"></a>
+<article class="post-card group">
+  <a class="insert-link" href="{{ .Permalink }}"></a>
 
-	<div class="p-6">
+  <figure class="post-card__media">
+    {{- $img := .Params.image | default "images/default-placeholder.png" -}}
+    {{- if (strings.HasPrefix $img "http") -}}
+      <img class="post-card__image" src="{{ $img }}" alt="{{ .Title }}">
+    {{- else -}}
+      {{- with $cardImage := resources.Get $img -}}
+        <img class="post-card__image" src="{{ $cardImage.Permalink }}" alt="{{ .Title }}" width="{{ $cardImage.Width }}" height="{{ $cardImage.Height }}">
+      {{- else -}}
+        <img class="post-card__image" src="{{ $img | relURL }}" alt="{{ .Title }}">
+      {{- end -}}
+    {{- end -}}
+  </figure>
 
-		{{/* Badge nhỏ cho tag/category đầu tiên */}}
-		{{- $primaryTag := "" -}}
-		{{- $primaryCat := "" -}}
-		{{- with .Params.tags }}{{ $primaryTag = index . 0 }}{{ end -}}
-		{{- with .Params.categories }}{{ $primaryCat = index . 0 }}{{ end -}}
-		{{- $label := cond $primaryTag $primaryTag $primaryCat -}}
-		{{- if $label }}
-		{{- $color := "bg-blue-100 text-blue-800" -}}
-		{{- if in (lower $label) "java" }}{{ $color = "bg-orange-100 text-orange-800" }}{{ end -}}
-		{{- if in (lower $label) "javascript" }}{{ $color = "bg-amber-100 text-amber-800" }}{{ end -}}
-		{{- if in (lower $label) "network" }}{{ $color = "bg-indigo-100 text-indigo-800" }}{{ end -}}
-		<span class="text-xs font-semibold px-3 py-1 rounded-full {{ $color }}">{{ $label | humanize }}</span>
-		{{- end }}
+  <div class="post-card__body">
+    {{- $primaryTag := "" -}}
+    {{- $primaryCat := "" -}}
+    {{- with .Params.tags }}{{ $primaryTag = index . 0 }}{{ end -}}
+    {{- with .Params.categories }}{{ $primaryCat = index . 0 }}{{ end -}}
+    {{- $label := cond $primaryTag $primaryTag $primaryCat -}}
 
-		<time datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}">{{ .Date.Format "Jan 02, 2006" }}</time>
+    <div class="post-card__meta">
+      {{- if $label -}}
+        <span class="post-card__tag">{{ $label | humanize }}</span>
+      {{- end -}}
+      <time datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}">{{ .Date.Format "Jan 02, 2006" }}</time>
+    </div>
 
-		<h3 class="my-4 text-2xl font-bold">{{ .LinkTitle }}</h3>
-
-		<p class="text-normal leading-normal text-zinc-500 line-clamp-2">{{ .Params.description }}</p>
-
-	</div>
+    <h3 class="post-card__title">{{ .LinkTitle }}</h3>
+    <p class="post-card__excerpt line-clamp-2">{{ .Params.description }}</p>
+  </div>
 </article>

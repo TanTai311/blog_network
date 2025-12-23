@@ -3,7 +3,7 @@ title: "Tối ưu giao tiếp mạng: timeout, retry và backoff"
 date: 2025-01-05T09:45:00+07:00
 slug: "toi-uu-timeout-retry-backoff"
 description: "Cách đặt timeout hợp lý, retry có kiểm soát và theo dõi độ trễ để giữ dịch vụ ổn định."
-image: ''
+image: 'images/Tối ưu giao tiếp mạng timeout, retry và backoff.png'
 categories:
   - performance
 tags:
@@ -36,3 +36,4 @@ draft: false
 - Retry đúng loại lỗi, có backoff.
 - Log đủ dữ liệu để phân tích hiệu năng.
 - Thử tải với mạng kém (loss/latency) để hiệu chỉnh.
+

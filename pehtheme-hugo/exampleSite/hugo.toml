@@ -1,6 +1,6 @@
 baseURL = 'https://example.org/'
 languageCode = 'vi-vn'
-title = 'Blog Lập Trình Mạng'
+title = 'Blog Cá Nhân'
 theme = 'pehtheme-hugo'
 themesDir = '../..'
 disableKinds = ['taxonomy', 'term']
@@ -16,7 +16,7 @@ disqusShortname = 'your-disqus-shortname' # <- Get form here : https://disqus.co
 
   [params.Author]
 	name = 'NGUYỄN TẤN TÀI'
-	bio = 'Sinh viên CNTT, định hướng backend và lập trình mạng. Ưu tiên API ổn định, log rõ ràng, tối ưu timeout/retry và bảo mật kết nối.'
+	bio = 'Sinh viên CNTT Trường Đại học Hutech, định huớng Frontend, lập trình mạng & AI engineer. Mình ưu tiên thiết kế website đẹp mắt, API ổn định, log rõ ràng, tối ưu timeout/retry và áp dụng AI vào website.'
 	avatar = 'images/ảnh biển2.png'
 	github = 'https://github.com/TanTai311'
 
@@ -36,6 +36,10 @@ disqusShortname = 'your-disqus-shortname' # <- Get form here : https://disqus.co
 		name = 'Hồ sơ'
 		pageRef = '/about'
 		weight = 30
+	[[menu.main]]
+		name = 'Liên hệ'
+		pageRef = '/contact'
+		weight = 40
 
 [markup]
   [markup.goldmark]

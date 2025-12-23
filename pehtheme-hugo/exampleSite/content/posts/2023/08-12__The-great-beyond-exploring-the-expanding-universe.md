@@ -3,7 +3,7 @@ title: "Giao thức UDP vs TCP: Khi nào nên dùng?"
 date: 2024-12-05T08:30:00+07:00
 slug: "udp-vs-tcp-nen-dung-khi-nao"
 description: "So sánh chi tiết TCP và UDP trong lập trình mạng, ưu/nhược điểm và cách chọn giao thức phù hợp."
-image: ''
+image: 'images/Giao thức UDP vs TCP Khi nào nên dùng.png'
 categories:
   - networking
 tags:
@@ -68,3 +68,4 @@ socket.send(packet);
 - Log đầy đủ địa chỉ IP/port và thời gian round-trip.
 - Rate limit theo client để tránh flood (nhất là UDP).
 - Theo dõi packet loss và retry policy phù hợp.
+

@@ -3,7 +3,7 @@ title: "Java HTTP client: HttpURLConnection và xử lý JSON"
 date: 2024-11-20T10:30:00+07:00
 slug: "java-httpurlconnection-json"
 description: "Cách gửi GET/POST với HttpURLConnection, thiết lập timeout, header và parse JSON bằng Gson."
-image: ''
+image: 'images/Java HTTP client HttpURLConnection và xử lý JSON.png'
 categories:
   - java
 tags:
@@ -60,3 +60,4 @@ try (OutputStream os = conn.getOutputStream()) {
 
 ## 7. Khi nên nâng cấp
 - Nếu cần HTTP/2, reactive, pooling: chuyển sang `HttpClient` (Java 11) hoặc thư viện khác (WebClient/OkHttp).
+
