@@ -23,6 +23,9 @@ disqusShortname = 'your-disqus-shortname' # <- Get form here : https://disqus.co
 [pagination]
 	pagerSize = 6 # <- Set the desired number of posts per page
 
+[outputs]
+	home = ['HTML', 'RSS', 'JSON']
+
 [menu] # Menu management
 	[[menu.main]]
 		name = 'Home'
