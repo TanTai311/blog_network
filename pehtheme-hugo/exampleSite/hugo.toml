@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://tantai311.github.io/blog_network/'
 languageCode = 'vi-vn'
 title = 'Blog Cá Nhân'
 theme = 'pehtheme-hugo'
