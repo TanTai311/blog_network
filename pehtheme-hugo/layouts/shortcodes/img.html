@@ -1,0 +1,7 @@
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default "" -}}
+{{- with resources.Get $src -}}
+<img src="{{ .RelPermalink }}" alt="{{ $alt }}" loading="lazy">
+{{- else -}}
+<img src="{{ $src | relURL }}" alt="{{ $alt }}" loading="lazy">
+{{- end -}}
