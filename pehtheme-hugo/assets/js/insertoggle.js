@@ -67,12 +67,30 @@
         return;
     }
 
+    function getCurrentTheme() {
+        return root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+    }
+
+    function setGiscusTheme(theme) {
+        const frame = document.querySelector("iframe.giscus-frame");
+        if (!frame || !frame.contentWindow) {
+            return;
+        }
+
+        frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+        );
+    }
+
     function applyTheme(theme) {
         if (theme === "dark") {
             root.setAttribute("data-theme", "dark");
         } else {
             root.removeAttribute("data-theme");
         }
+
+        setGiscusTheme(theme);
     }
 
     const storedTheme = localStorage.getItem(storageKey);
@@ -88,6 +106,17 @@
         applyTheme(nextTheme);
         localStorage.setItem(storageKey, nextTheme);
     });
+
+    if (document.body) {
+        const observer = new MutationObserver(() => {
+            if (document.querySelector("iframe.giscus-frame")) {
+                setGiscusTheme(getCurrentTheme());
+                observer.disconnect();
+            }
+        });
+
+        observer.observe(document.body, { childList: true, subtree: true });
+    }
 })();
 
 // SEARCH

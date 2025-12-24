@@ -1,4 +1,4 @@
-﻿{{ define "main" }}
+{{ define "main" }}
 {{- $isPost := eq .Section "posts" -}}
 {{- partial "content/breadcrumb.html" . -}}
 
@@ -161,9 +161,22 @@
 
         <h2 class="text-xl font-semibold">Bình luận</h2>
 
-        <p>Chức năng bình luận đang cập nhật.</p>
-
-        {{- /* template "_internal/disqus.html" . */ -}}
+        <div class="giscus mt-6"></div>
+        <script src="https://giscus.app/client.js"
+          data-repo="TanTai311/blog_network"
+          data-repo-id="R_kgDOQtIMkg"
+          data-category="Comments"
+          data-category-id="DIC_kwDOQtIMks4C0MVp"
+          data-mapping="pathname"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="bottom"
+          data-theme="light"
+          data-lang="en"
+          crossorigin="anonymous"
+          async>
+        </script>
 
       </div>
 
