@@ -1,151 +1,117 @@
----
-title: "Hồ sơ"
+﻿---
+title: "About"
 date: 2024-12-22T09:00:00+07:00
-image: ''
 draft: false
 ---
 
-<div class="not-prose rounded-3xl bg-zinc-100 p-6 lg:p-10">
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 profile-grid">
-    <div class="flex items-center">
-      <img class="w-20 h-20 rounded-full bg-white" style="object-fit: cover; object-position: 30% 30%;" src="/blog_network/images/ảnh biển2.png" alt="NGUYỄN TẤN TÀI">
-    </div>
-    <div>
-      <p class="text-xs uppercase text-zinc-500">Hồ sơ cá nhân</p>
-      <h1 class="text-4xl font-bold mt-2">NGUYỄN TẤN TÀI</h1>
-      <p class="text-zinc-500 mt-3">
-        Sinh viên CNTT Trường Đại học Hutech, định hướng Frontend, lập trình mạng & AI engineer. Mình ưu tiên thiết kế website đẹp mắt,API ổn định, log rõ ràng,
-        tối ưu timeout/retry và áp dụng AI vào website.
-      </p>
-      <div class="flex flex-wrap gap-3 mt-4 text-sm">
-        <span class="rounded-full border px-4 py-1 bg-white">Networking</span>
-        <span class="rounded-full border px-4 py-1 bg-white">Python</span>
-        <span class="rounded-full border px-4 py-1 bg-white">JavaScript</span>
-        <span class="rounded-full border px-4 py-1 bg-white">Machine Learning</span>
+<div class="not-prose page-shell navy-theme">
+  <section class="page-hero">
+    <div class="page-hero__media">
+      <div class="photo-frame">
+        {{< img src="images/anh-bien2.png" alt="Ảnh chân dung" >}}
       </div>
     </div>
-  </div>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6 text-sm">
-    <div class="rounded-2xl border bg-white p-4">
-      <p class="text-xs uppercase text-zinc-500">Định hướng</p>
-      <p class="font-semibold mt-1">Frontend, lập trình mạng & AI engineer</p>
+    <div class="page-hero__content">
+      <p class="page-kicker">ABOUT</p>
+      <h1 class="page-title">NGUYỄN TẤN TÀI</h1>
+      <p class="page-subtitle">
+        Sinh viên CNTT Trường Đại học Công nghệ TP.HCM (HUTECH), định hướng Backend, Hệ thống mạng
+        và ứng dụng AI vào hệ thống web.
+      </p>
+      <div class="page-actions">
+        <a class="btn-primary" href="{{< relref \"resume.md\" >}}">View Resume</a>
+        <a class="btn-ghost" href="{{< relref \"portfolio.md\" >}}">View Portfolio</a>
+      </div>
     </div>
-    <div class="rounded-2xl border bg-white p-4">
-      <p class="text-xs uppercase text-zinc-500">Ngôn ngữ</p>
-      <p class="font-semibold mt-1">Python, JavaScript</p>
+  </section>
+
+  <section class="page-section">
+    <div class="section-head section-head--wide">
+      <div>
+        <p class="section-kicker">ABOUT ME</p>
+        <h2 class="section-title">Mình là ai?</h2>
+        <p class="section-subtitle section-subtitle--wide">
+          Mình là Nguyễn Tấn Tài, sinh viên ngành Công nghệ Thông tin tại Trường Đại học Công nghệ TP.HCM (HUTECH),
+          với định hướng phát triển lâu dài trong lĩnh vực Backend, Hệ thống mạng và ứng dụng Trí tuệ nhân tạo vào hệ thống web.
+          <br><br>
+          Trong quá trình học tập, mình đặc biệt quan tâm đến cách các hệ thống phần mềm vận hành ở phía sau giao diện người dùng:
+          từ việc thiết kế API rõ ràng, xử lý request/response, tối ưu hiệu năng mạng, cho đến các cơ chế đảm bảo độ ổn định như
+          timeout, retry, backoff, logging và monitoring. Mình tin rằng một hệ thống tốt không chỉ "chạy được", mà còn phải dễ mở rộng,
+          dễ bảo trì và có khả năng chịu lỗi trong môi trường thực tế.
+          <br><br>
+          Song song với nền tảng backend và mạng máy tính, mình đang từng bước tiếp cận Machine Learning ứng dụng, đặc biệt là cách đưa
+          các mô hình ML vào các bài toán thực tiễn như phân tích dữ liệu, hệ thống gợi ý và xử lý ngôn ngữ tự nhiên. Thay vì chỉ dừng lại
+          ở lý thuyết, mình tập trung vào việc hiểu bản chất vấn đề, quy trình dữ liệu và cách triển khai mô hình trong hệ thống thực tế.
+          <br><br>
+          Hiện tại, mình đang trong quá trình học tập, thực hành và phát triển các dự án cá nhân nhằm củng cố kiến thức nền tảng và rèn luyện
+          tư duy hệ thống - một kỹ năng quan trọng đối với kỹ sư phần mềm và kỹ sư hệ thống trong tương lai.
+        </p>
+      </div>
     </div>
-    <div class="rounded-2xl border bg-white p-4">
-      <p class="text-xs uppercase text-zinc-500">Chủ đề</p>
-      <p class="font-semibold mt-1">TCP/UDP, HTTP, WebSocket,Machine learning, AI</p>
+    <div class="info-grid">
+      <article class="info-card">
+        <h3 class="info-card__title">Mục tiêu</h3>
+        <p class="info-card__text">Trở thành kỹ sư backend/AI có khả năng triển khai hệ thống thực tế.</p>
+      </article>
+      <article class="info-card">
+        <h3 class="info-card__title">Định hướng</h3>
+        <p class="info-card__text">Backend, API, hệ thống mạng và ứng dụng AI.</p>
+      </article>
+      <article class="info-card">
+        <h3 class="info-card__title">Giá trị làm việc</h3>
+        <p class="info-card__text">Code rõ ràng, có logging, có kiểm soát lỗi và đo đạc hiệu năng.</p>
+      </article>
+      <article class="info-card">
+        <h3 class="info-card__title">Hiện tại</h3>
+        <p class="info-card__text">Đang học và phát triển các dự án cá nhân, học thuật.</p>
+      </article>
     </div>
-    <div class="rounded-2xl border bg-white p-4">
-      <p class="text-xs uppercase text-zinc-500">Mục tiêu</p>
-      <p class="font-semibold mt-1">Hệ thống ổn định & dễ giám sát</p>
+  </section>
+
+  <section class="page-section">
+    <div class="section-head section-head--wide">
+      <div>
+        <p class="section-kicker">WHY THIS BLOG</p>
+        <h2 class="section-title">Vì sao mình viết blog?</h2>
+        <p class="section-subtitle section-subtitle--wide">
+          Blog này ra đời từ mong muốn học tập chủ động và có hệ thống hơn trong quá trình học CNTT. Thay vì chỉ ghi chép rời rạc
+          hoặc học để qua môn, mình chọn cách viết lại kiến thức bằng ngôn ngữ của chính mình, kết hợp với ví dụ thực tế và kinh nghiệm
+          xử lý lỗi trong quá trình làm bài tập, đồ án và dự án cá nhân.
+          <br><br>
+          Đối với mình, việc viết blog không chỉ là chia sẻ kiến thức, mà còn là một phương pháp học hiệu quả:
+          <br>
+          - Khi viết lại một vấn đề, mình buộc phải hiểu rõ bản chất, không học vẹt.
+          <br>
+          - Việc hệ thống hóa kiến thức giúp mình nhớ lâu hơn và dễ dàng tra cứu lại khi cần.
+          <br>
+          - Quá trình diễn đạt các khái niệm kỹ thuật giúp mình cải thiện kỹ năng trình bày và tư duy logic, vốn rất quan trọng khi làm việc nhóm
+          hoặc tham gia dự án thực tế.
+          <br><br>
+          Nội dung blog tập trung chủ yếu vào các chủ đề như lập trình backend, giao thức mạng, thiết kế API, xử lý bất đồng bộ, tối ưu hệ thống
+          và các ứng dụng Machine Learning cơ bản. Các bài viết được xây dựng theo hướng từ nền tảng đến thực hành, phù hợp cho sinh viên hoặc
+          những người mới tiếp cận lĩnh vực này.
+          <br><br>
+          Ngoài ra, blog cũng đóng vai trò như một portfolio học thuật và kỹ thuật cá nhân, ghi lại quá trình học tập và tiến bộ của bản thân theo thời gian.
+          Mỗi bài viết là một cột mốc nhỏ, phản ánh những gì mình đã học, đã làm và đã hiểu tại một thời điểm nhất định.
+          <br><br>
+          Mình hy vọng rằng blog không chỉ hữu ích cho bản thân, mà còn có thể giúp đỡ những người học sau, hoặc đơn giản là tạo ra một không gian chia sẻ
+          kiến thức kỹ thuật một cách rõ ràng, thực tế và dễ tiếp cận.
+        </p>
+      </div>
     </div>
-  </div>
-</div>
-
-## Giới thiệu
-
-Mục tiêu của mình là hiểu sâu cơ chế giao tiếp mạng và triển khai hệ thống có tính ổn định cao.
-Mình chú trọng viết code rõ ràng, có log, có xử lý lỗi và đo đạc hiệu năng để tối ưu khi số kết nối tăng.
-
-Các học phần và đồ án mình đã làm tập trung vào:
-- Socket TCP/UDP, timeout/retry/backoff.
-- REST API với Spring Boot và Express.
-- Bảo mật cơ bản: CORS, JWT, HTTPS.
-- Giao tiếp realtime với WebSocket.
-
-## Dự án nổi bật
-
-<div class="not-prose grid grid-cols-1 md:grid-cols-2 gap-6">
-  <article class="rounded-2xl border bg-zinc-100 p-6">
-    <h3 class="text-xl font-semibold">Recommender System + Sentiment Analysis</h3>
-    <p class="text-sm text-zinc-500 mt-3">Gợi ý sản phẩm và phân tích cảm xúc đánh giá tiếng Việt trên sàn thương mại điện tử.</p>
-    <p class="text-xs text-zinc-500 mt-3">Công nghệ, ngôn ngữ và Kĩ Thuật : Jupyter Notebook, Python, NLP, Deep Learning</p>
-    <a class="flex items-center mt-3 text-sm font-semibold hover:underline" href="https://github.com/TanTai311/rcm_system-sentiment" target="_blank" rel="noopener">
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
-        <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-      </svg>
-      <span class="ml-2">GitHub</span>
-    </a>
-  </article>
-  <article class="rounded-2xl border bg-zinc-100 p-6">
-    <h3 class="text-xl font-semibold">App Mobile Bán Sách</h3>
-    <p class="text-sm text-zinc-500 mt-3">Ứng dụng bán sách kèm gợi ý sách theo hành vi người dùng.</p>
-    <p class="text-xs text-zinc-500 mt-3">Công nghệ, ngôn ngữ và kĩ thuật : Flutter, Dart, Jupyter NoteBook, Python</p>
-    <a class="flex items-center mt-3 text-sm font-semibold hover:underline" href="https://github.com/TanTai311/Do_an_app_mobile" target="_blank" rel="noopener">
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
-        <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-      </svg>
-      <span class="ml-2">GitHub</span>
-    </a>
-  </article>
-  <article class="rounded-2xl border bg-zinc-100 p-6">
-    <h3 class="text-xl font-semibold">Blog Cá Nhân</h3>
-    <p class="text-sm text-zinc-500 mt-3">Blog chia sẻ kiến thức lập trình mạng và trải nghiệm học tập.</p>
-    <p class="text-xs text-zinc-500 mt-3">Công nghệ, ngôn ngữ và kĩ thuật : Hugo, Tailwind CSS, HTML, JS</p>
-    <a class="flex items-center mt-3 text-sm font-semibold hover:underline" href="https://github.com/TanTai311/blog_network" target="_blank" rel="noopener">
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
-        <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-      </svg>
-      <span class="ml-2">GitHub</span>
-    </a>
-  </article>
-</div>
-
-## Chứng chỉ
-
-<div class="not-prose cert-grid">
-  <figure class="rounded-2xl border bg-zinc-100 p-4">
-    <img class="rounded-xl w-full bg-white p-2 cert-image" src="/blog_network/images/Networking Basics.png" alt="Networking Basics">
-    <figcaption class="text-sm text-center mt-3">Networking Basics</figcaption>
-  </figure>
-  <figure class="rounded-2xl border bg-zinc-100 p-4">
-    <img class="rounded-xl w-full bg-white p-2 cert-image" src="/blog_network/images/Introduction to Cybersecurity.png" alt="Introduction to Cybersecurity">
-    <figcaption class="text-sm text-center mt-3">Introduction to Cybersecurity</figcaption>
-  </figure>
-  <figure class="rounded-2xl border bg-zinc-100 p-4">
-    <img class="rounded-xl w-full bg-white p-2 cert-image" src="/blog_network/images/JavaScript Essentials 1.png" alt="JavaScript Essentials 1">
-    <figcaption class="text-sm text-center mt-3">JavaScript Essentials 1</figcaption>
-  </figure>
-  <figure class="rounded-2xl border bg-zinc-100 p-4">
-    <img class="rounded-xl w-full bg-white p-2 cert-image" src="/blog_network/images/JavaScript Essentials 2.png" alt="JavaScript Essentials 2">
-    <figcaption class="text-sm text-center mt-3">JavaScript Essentials 2</figcaption>
-  </figure>
-</div>
-
-## Thành tích nổi bật
-
-<div class="not-prose achievement-grid gap-6">
-  <figure class="rounded-2xl border bg-zinc-100 p-4">
-    <img class="rounded-xl bg-white p-2 achievement-image" src="/blog_network/images/2280602804-Nguy%E1%BB%85n%20T%E1%BA%A5n%20T%C3%A0i.png" alt="Nguyễn Tấn Tài">
-    <figcaption class="text-sm text-center mt-3">Sinh viên tiêu biểu năm học 2024-2025</figcaption>
-  </figure>
-  <figure class="rounded-2xl border bg-zinc-100 p-4">
-    <img class="rounded-xl bg-white p-2 achievement-image" src="/blog_network/images/%C4%90%E1%BA%A1t%20d%E1%BB%B1%20%C3%A1n%20xu%E1%BA%A5t%20s%E1%BA%AFc%20t%E1%BA%A1i%20phi%C3%AAn%20c%C3%B4ng%20b%E1%BB%91%20poster.jpg" alt="Đạt dự án xuất sắc tại phiên công bố poster">
-    <figcaption class="text-sm text-center mt-3">Dự án xuất sắc tại phiên công bố poster</figcaption>
-  </figure>
-</div>
-
-## Liên hệ
-
-<div class="not-prose grid grid-cols-1 md:grid-cols-2 gap-6">
-  <div class="rounded-2xl border bg-zinc-100 p-6">
-    <h3 class="text-xl font-semibold mb-4">Kênh chính</h3>
-    <a class="flex items-center text-sm font-semibold hover:underline" href="https://github.com/TanTai311" target="_blank" rel="noopener">
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
-        <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-      </svg>
-      <span class="ml-2">GitHub: TanTai311</span>
-    </a>
-    <p class="text-sm text-zinc-500 mt-3">Email: nttei24@gmail.com</p>
-    <p class="text-sm text-zinc-500 mt-3">Điện thoại: 0782980391</p>
-  </div>
-  <div class="rounded-2xl border bg-zinc-100 p-6">
-    <h3 class="text-xl font-semibold mb-4">Thông tin nhanh</h3>
-    <p class="text-sm text-zinc-500">Khu vực: Tp.Hồ Chí Minh, Việt Nam</p>
-    <p class="text-sm text-zinc-500 mt-3">Sẵn sàng: Thực tập/part-time/Full-time Front-end,AI engineer,Data Analyst</p>
-    <p class="text-sm text-zinc-500 mt-3">Ưu tiên: Dự án liên quan networking,Machine Learning & AI</p>
-  </div>
+    <div class="highlight-grid">
+      <article class="highlight-card">
+        <p class="highlight-card__title">Hệ thống hóa kiến thức</p>
+        <p class="highlight-card__text">Tổng hợp lại các chủ đề từ môn học đến dự án thực tế.</p>
+      </article>
+      <article class="highlight-card">
+        <p class="highlight-card__title">Chia sẻ thực hành</p>
+        <p class="highlight-card__text">Các bài viết đi kèm ví dụ, kinh nghiệm xử lý lỗi.</p>
+      </article>
+      <article class="highlight-card">
+        <p class="highlight-card__title">Theo dõi tiến bộ</p>
+        <p class="highlight-card__text">Mỗi bài viết là một mốc học tập và phát triển kỹ năng.</p>
+      </article>
+    </div>
+  </section>
 </div>

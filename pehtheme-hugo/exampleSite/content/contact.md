@@ -7,7 +7,7 @@ draft: false
 <div class="not-prose grid grid-cols-1 md:grid-cols-2 gap-6">
   <div class="rounded-2xl border bg-zinc-100 p-6">
     <h3 class="text-xl font-semibold mb-4">Kênh chính</h3>
-    <p class="text-sm text-zinc-500">Email: tanteiuwu@gmail.com</p>
+    <p class="text-sm text-zinc-500">Email: nttei24@gmail.com</p>
     <p class="text-sm text-zinc-500 mt-3">Điện thoại: 0782980391</p>
     <a class="flex items-center text-sm font-semibold hover:underline mt-3" href="https://github.com/TanTai311" target="_blank" rel="noopener">
       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">

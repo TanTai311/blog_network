@@ -1,0 +1,15 @@
+{{- $src := .Get "src" -}}
+{{- $title := .Get "title" | default (.Get "alt" | default "") -}}
+{{- $label := $title | default "View PDF" -}}
+{{- $class := .Get "class" | default "" -}}
+{{- with resources.Get $src -}}
+{{- $pdfUrl := printf "%s#toolbar=0&navpanes=0&scrollbar=0&view=FitH" .RelPermalink -}}
+<object data="{{ $pdfUrl }}" type="application/pdf"{{ if $class }} class="{{ $class }}"{{ end }} aria-label="{{ $label }}">
+  <a href="{{ .RelPermalink }}">{{ $label }}</a>
+</object>
+{{- else -}}
+{{- $pdfUrl := printf "%s#toolbar=0&navpanes=0&scrollbar=0&view=FitH" ($src | relURL) -}}
+<object data="{{ $pdfUrl }}" type="application/pdf"{{ if $class }} class="{{ $class }}"{{ end }} aria-label="{{ $label }}">
+  <a href="{{ $src | relURL }}">{{ $label }}</a>
+</object>
+{{- end -}}

@@ -1,0 +1,6 @@
+{{- $src := .Get "src" -}}
+{{- with resources.Get $src -}}
+{{- .RelPermalink -}}
+{{- else -}}
+{{- $src | relURL -}}
+{{- end -}}
