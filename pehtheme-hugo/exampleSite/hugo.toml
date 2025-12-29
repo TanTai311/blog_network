@@ -16,7 +16,7 @@ disqusShortname = 'your-disqus-shortname' # <- Get form here : https://disqus.co
 
   [params.Author]
 	name = 'NGUYỄN TẤN TÀI'
-	bio = 'Sinh viên CNTT Trường Đại học Hutech, định hướng Backend, lập trình mạng & AI engineer. Mình ưu tiên thiết kế website đẹp mắt, API ổn định, log rõ ràng, tối ưu timeout/retry và áp dụng AI vào website.'
+	bio = 'Sinh viên CNTT Trường Đại học Hutech, định hướng Backend, lập trình mạng & AI engineer.'
 	avatar = 'images/ảnh biển2.png'
 	github = 'https://github.com/TanTai311'
 

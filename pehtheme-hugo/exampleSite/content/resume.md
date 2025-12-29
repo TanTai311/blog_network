@@ -4,7 +4,7 @@ date: 2024-12-22T09:00:00+07:00
 draft: false
 ---
 
-<div class="not-prose page-shell navy-theme">
+<div class="not-prose page-shell navy-theme resume-page">
   <section class="page-hero resume-hero">
     <div class="page-hero__media">
       <div class="photo-frame">
@@ -15,6 +15,10 @@ draft: false
       <p class="page-kicker">RESUME</p>
       <h1 class="page-title">Hồ sơ học tập & kỹ năng</h1>
       <p class="page-subtitle">Thông tin học vấn và kỹ năng chính hiện tại.</p>
+      <div class="page-actions">
+        <a class="btn-primary" href="https://drive.google.com/file/d/1h-8Rz9NvaEyR_ePPU5-V-X4dDjm-2C62/view" target="_blank" rel="noopener">Xem CV</a>
+        <a class="btn-ghost" href="https://drive.google.com/uc?export=download&id=1h-8Rz9NvaEyR_ePPU5-V-X4dDjm-2C62" target="_blank" rel="noopener">Tải CV</a>
+      </div>
     </div>
   </section>
 

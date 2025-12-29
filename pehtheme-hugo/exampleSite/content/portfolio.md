@@ -4,12 +4,10 @@ date: 2024-12-22T09:00:00+07:00
 draft: false
 ---
 
-<div class="not-prose page-shell navy-theme">
+<div class="not-prose page-shell navy-theme portfolio-page">
   <section class="page-hero">
-    <div class="page-hero__media">
-      <div class="photo-frame">
-        {{< img src="images/AnhBiaDuAnFortfolio.png" alt="Ảnh bìa dự án" >}}
-      </div>
+    <div class="page-hero__media portfolio-hero__media">
+      {{< img src="images/AnhBiaDuAnFortfolio.png" alt="Ảnh bìa dự án" >}}
     </div>
     <div class="page-hero__content">
       <p class="page-kicker">PORTFOLIO</p>
@@ -31,7 +29,13 @@ draft: false
         </div>
         <div class="project-card__body">
           <h3 class="project-card__title">Recommender System + Sentiment Analysis</h3>
-          <p class="project-card__desc">Gợi ý sản phẩm và phân tích cảm xúc đánh giá tiếng Việt trên sàn thương mại điện tử.</p>
+          <p class="project-card__desc">
+            Mục tiêu: cá nhân hóa gợi ý sản phẩm và phân tích cảm xúc đánh giá tiếng Việt.
+            <br>
+            Điểm nổi bật: tiền xử lý NLP, mô hình phân loại cảm xúc, kết hợp gợi ý theo hành vi.
+            <br>
+            Ứng dụng: hỗ trợ người dùng tìm sản phẩm phù hợp, tổng hợp ý kiến khách hàng.
+          </p>
           <div class="project-card__meta">Python · NLP · Deep Learning</div>
           <div class="project-card__links">
             <a href="https://github.com/TanTai311/rcm_system-sentiment" target="_blank" rel="noopener">
@@ -49,7 +53,13 @@ draft: false
         </div>
         <div class="project-card__body">
           <h3 class="project-card__title">App Mobile Bán Sách</h3>
-          <p class="project-card__desc">Ứng dụng bán sách kèm gợi ý sách theo hành vi người dùng.</p>
+          <p class="project-card__desc">
+            Ứng dụng bán sách trên mobile, hỗ trợ tìm kiếm, giỏ hàng và đặt mua.
+            <br>
+            Điểm nổi bật: gợi ý sách theo hành vi người dùng, trải nghiệm mượt mà.
+            <br>
+            Vai trò: thiết kế UI, kết nối API và xử lý dữ liệu hiển thị.
+          </p>
           <div class="project-card__meta">Flutter · Dart · Python</div>
           <div class="project-card__links">
             <a href="https://github.com/TanTai311/Do_an_app_mobile" target="_blank" rel="noopener">
@@ -67,7 +77,13 @@ draft: false
         </div>
         <div class="project-card__body">
           <h3 class="project-card__title">Blog Cá Nhân</h3>
-          <p class="project-card__desc">Blog chia sẻ kiến thức lập trình mạng và trải nghiệm học tập.</p>
+          <p class="project-card__desc">
+            Nền tảng chia sẻ kiến thức backend, mạng và AI ứng dụng.
+            <br>
+            Điểm nổi bật: giao diện tối giản, tối ưu tốc độ, dễ quản trị nội dung.
+            <br>
+            Vai trò: thiết kế giao diện, cấu trúc nội dung và triển khai Hugo.
+          </p>
           <div class="project-card__meta">Hugo · Tailwind · JavaScript</div>
           <div class="project-card__links">
             <a href="https://github.com/TanTai311/blog_network" target="_blank" rel="noopener">

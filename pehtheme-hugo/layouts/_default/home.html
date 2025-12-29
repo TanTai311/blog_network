@@ -1,14 +1,15 @@
-{{ define "main" }}
+﻿{{ define "main" }}
 
 <!-- Profile intro -->
 <section class="my-8 md:my-14">
   <div class="home-hero">
     <div class="home-hero__avatar">
-      <img class="w-20 h-20 rounded-full bg-white" style="object-fit: cover; object-position: 30% 30%;" src="{{ .Site.Params.Author.avatar | relURL }}" alt="{{ .Site.Params.Author.name }}">
+      <img class="home-hero__avatar-img rounded-full bg-white" style="object-fit: cover; object-position: 30% 30%;" src="{{ .Site.Params.Author.avatar | relURL }}" alt="{{ .Site.Params.Author.name }}">
     </div>
-    <div>
+    <div class="home-hero__content">
       <p class="section-kicker">Hồ sơ</p>
       <h1 class="home-hero__title">{{ .Site.Params.Author.name }}</h1>
+      <p class="home-hero__slogan">Hành động hôm nay, tạo nên ngày mai</p>
       <p class="home-hero__bio">{{ .Site.Params.Author.bio }}</p>
       <div class="home-hero__actions">
         <a class="btn-primary" href="{{ "about" | relURL }}">Xem About</a>
@@ -23,7 +24,7 @@
     <div>
       <p class="section-kicker">Chủ đề</p>
       <h2 class="section-title">Chủ đề chính</h2>
-      <p class="section-subtitle">Tập trung vào hệ thống mạng, backend, và ứng dụng AI cho bài toán thực tế.</p>
+      <p class="section-subtitle">Tập trung vào hệ thống mạng, backend và ứng dụng AI cho bài toán thực tế.</p>
     </div>
   </div>
   <div class="topic-grid">
@@ -50,7 +51,7 @@
     <div>
       <p class="section-kicker">Nổi bật</p>
       <h2 class="section-title">Bài viết nổi bật</h2>
-      <p class="section-subtitle">Các bài viết tiêu biểu và dễ đọc để bắt đầu.</p>
+      <p class="section-subtitle">Các bài viết tiêu biểu và đáng đọc nhất.</p>
     </div>
     <a class="section-link" href="{{ "posts" | relURL }}">Xem tất cả</a>
   </div>
